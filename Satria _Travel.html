@@ -1,0 +1,1641 @@
+<html>
+<html lang="id">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Satria Travel</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
+
+body{
+background:#121212;
+font-family:'Segoe UI',sans-serif;
+color:white;
+}
+
+section{
+padding:90px 0;
+}
+
+.navbar{
+transition:.4s;
+background:transparent;
+}
+
+.navbar.scrolled{
+background:crimson;
+box-shadow:0 5px 20px rgba(0,0,0,.5);
+}
+
+.nav-link{
+color:white!important;
+margin-left:15px;
+}
+
+.nav-link:hover{
+color:#ffc0cb!important;
+}
+
+.hero{
+height:100vh;
+background:
+linear-gradient(
+rgba(0,0,0,.55),
+rgba(0,0,0,.75)
+),
+
+url("sumut2.jpg");
+
+background-size:cover;
+background-position:center;
+display:flex;
+align-items:center;
+}
+
+.hero h1{
+font-size:70px;
+font-weight:bold;
+}
+
+.hero span{
+color:crimson;
+}
+
+.hero p{
+font-size:20px;
+max-width:650px;
+color:#e5e5e5;
+}
+
+.btn-crimson{
+background:crimson;
+color:white;
+padding:12px 28px;
+border:none;
+}
+
+.btn-crimson:hover{
+background:#99001f;
+color:white;
+}
+
+.stat-box{
+background:rgba(255,255,255,.08);
+backdrop-filter:blur(8px);
+padding:20px;
+border-radius:15px;
+text-align:center;
+}
+
+.scroll-down{
+font-size:35px;
+animation:turun 1.5s infinite;
+color:white;
+}
+
+@keyframes turun{
+0%{transform:translateY(0);}
+50%{transform:translateY(10px);}
+100%{transform:translateY(0);}
+}
+
+.section-title{
+color:crimson;
+font-weight:bold;
+margin-bottom:50px;
+}
+
+.card{
+background:#1c1c1c;
+border:none;
+color:white;
+transition:.4s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+box-shadow:0 0 25px crimson;
+}
+
+.card img{
+height:230px;
+object-fit:cover;
+}
+
+.testimoni-list{
+    background:#1c1c1c;
+    padding:25px;
+    border-radius:15px;
+    margin-bottom:20px;
+    display:flex;
+    align-items:center;
+    gap:25px;
+    transition:.3s;
+}
+
+.testimoni-list:hover{
+    transform:translateX(8px);
+    box-shadow:0 0 20px crimson;
+}
+
+
+.testimoni-list img{
+    width:90px;
+    height:90px;
+    object-fit:cover;
+    border-radius:50%;
+    border:3px solid crimson;
+}
+
+
+.testimoni-content{
+    flex:1;
+}
+
+
+.testimoni-content h4{
+    margin-bottom:5px;
+    font-weight:bold;
+}
+
+
+.testimoni-rating{
+    color:#ffc107;
+    font-size:20px;
+}
+
+
+.testimoni-time{
+    color:#999;
+    font-size:14px;
+}
+
+
+@media(max-width:768px){
+
+.testimoni-list{
+    flex-direction:column;
+    text-align:center;
+}
+
+}
+
+#testimoni .form-control,
+#testimoni .form-select{
+background:#2a2a2a;
+color:white;
+border:1px solid #555;
+}
+
+#testimoni .form-control:focus,
+#testimoni .form-select:focus{
+background:#2a2a2a;
+color:white;
+border-color:crimson;
+box-shadow:0 0 10px rgba(220,20,60,.4);
+}
+
+#testimoni textarea{
+resize:none;
+}
+
+#testimoni label{
+color:#ddd;
+font-weight:500;
+}
+
+#testimoni .card{
+border-radius:15px;
+overflow:hidden;
+}
+
+#testimoni .card-body{
+padding:25px;
+}
+
+#testimoni img.rounded-circle{
+width:120px;
+height:120px;
+object-fit:cover;
+border:4px solid crimson;
+transition:.4s;
+}
+
+#testimoni img.rounded-circle:hover{
+transform:scale(1.08);
+}
+
+#testimoni small{
+display:block;
+margin-top:10px;
+color:#999;
+}
+
+#testimoniBaru .card{
+animation:munculTestimoni .6s ease;
+}
+
+@keyframes munculTestimoni{
+
+from{
+opacity:0;
+transform:translateY(40px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+
+#btnTestimoni{
+transition:.3s;
+}
+
+#btnTestimoni:hover{
+transform:translateY(-3px);
+}
+
+#btnTestimoni:active{
+transform:scale(.98);
+}
+
+#testimoni hr{
+border:1px solid rgba(255,255,255,.15);
+}
+
+#testimoni h3{
+font-weight:bold;
+letter-spacing:1px;
+}
+
+#testimoni .form-control::placeholder{
+color:#999;
+}
+
+#testimoniBaru .card:hover{
+box-shadow:0 0 25px crimson;
+}
+
+@media(max-width:768px){
+
+#testimoni img.rounded-circle{
+
+width:90px;
+height:90px;
+
+}
+
+#testimoni .card-body{
+padding:20px;
+}
+}
+
+.badge{
+font-size:14px;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+<div class="container">
+<a class="navbar-brand fw-bold fs-3" href="#">
+<a 
+class="navbar-brand fw-bold fs-3" 
+href="#"
+data-bs-toggle="tooltip"
+data-bs-placement="bottom"
+title="Jelajahi Keindahan Sumatera Utara">
+
+<i class="bi bi-globe-asia-australia"></i>
+Satria Travel
+
+</a>
+
+<button
+class="navbar-toggler"
+data-bs-toggle="collapse"
+data-bs-target="#menu">
+<span class="navbar-toggler-icon"></span>
+</button>
+
+<div class="collapse navbar-collapse" id="menu">
+<ul class="navbar-nav ms-auto">
+
+<li class="nav-item">
+<a class="nav-link" href="#beranda">
+Beranda
+</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="#destinasi">
+Destinasi
+</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="#detail">
+Detail
+</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="#paket">
+Paket
+</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="#galeri">
+Galeri
+</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="#testimoni">
+Testimoni
+</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="#pesan">
+Pemesanan
+</a>
+</li>
+
+</ul>
+</div>
+</div>
+</nav>
+
+
+
+<!-- BERANDA -->
+
+<section id="beranda" class="hero">
+<div class="container">
+<div class="row">
+<div class="col-lg-8">
+
+<h1><br><br><br><br><br><br><br>
+Explore Keindahan
+<br>
+<span>Sumatera Utara</span>
+</h1>
+
+<p class="mt-4">
+Jelajahi tempat-tempat baru dan menarik di Sumatera Utara dan 
+nikmati keindahan alamnya yang mempesona.
+</p>
+
+<div class="mt-4">
+<a 
+href="#paket"
+class="btn btn-outline-light btn-lg"
+data-bs-toggle="popover"
+data-bs-placement="right"
+title="Pilihan Paket"
+data-bs-content="Tersedia paket Silver, Gold, dan Platinum dengan fasilitas berbeda.">
+Paket Wisata
+</a>
+
+</div>
+
+<div class="row mt-5 g-3">
+
+<div class="col-md-4">
+<div class="stat-box">
+<h2>30+</h2>
+<p>Destinasi</p>
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="stat-box">
+<h2>67K</h2>
+<p>Wisatawan</p>
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="stat-box">
+<h2>4.8 ★</h2>
+<p>Rating</p>
+</div>
+</div>
+</div>
+
+
+
+<!-- PROGRESS BAR KEPUASAN -->
+
+
+<div class="mt-5">
+<h5 class="mb-3">
+<i class="bi bi-star-fill text-warning"></i>
+Kepuasan Wisatawan
+</h5>
+
+<p class="mb-1">
+Pelayanan Tour Guide
+<span class="float-end">
+95%
+</span>
+</p>
+<div class="progress mb-3">
+<div 
+class="progress-bar bg-danger"
+style="width:95%">
+</div>
+</div>
+
+<p class="mb-1">
+Kualitas Destinasi
+<span class="float-end">
+98%
+</span>
+</p>
+<div class="progress mb-3">
+<div 
+class="progress-bar bg-danger"
+style="width:98%">
+</div>
+</div>
+
+<p class="mb-1">
+Pengalaman Liburan
+<span class="float-end">
+92%
+</span>
+</p>
+<div class="progress">
+<div 
+class="progress-bar bg-danger"
+style="width:92%">
+</div>
+</div>
+</div>
+
+<div class="mt-5">
+
+<a href="#destinasi">
+<i class="bi bi-chevron-double-down scroll-down"></i>
+</a>
+
+</div>
+</div>
+</div>
+</div>
+</section>
+
+
+
+<!-- PERINGATAN DISKON -->
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<div class="container">
+<div class="alert alert-danger shadow">
+<strong>Promo Liburan!</strong>
+Diskon hingga <b>25%</b> untuk seluruh paket wisata
+hingga akhir bulan.
+</div>
+</div>
+
+
+
+<!-- DESTINASI -->
+
+<section id="destinasi">
+<div class="container">
+
+<h2 class="section-title text-center">
+Destinasi Populer
+</h2>
+
+<div class="row g-4">
+
+<div class="col-lg-4">
+<div class="card h-100">
+<img src="Danau-Toba.png"
+class="card-img-top">
+<div class="card-body">
+<span class="badge bg-warning text-dark">
+Alam
+</span>
+<h4 class="mt-3">
+Danau Toba
+</h4>
+<p>
+Danau vulkanik terbesar di Asia Tenggara
+yang menjadi ikon wisata Sumatera Utara.
+</p>
+</div>
+</div>
+</div>
+
+<div class="col-lg-4">
+<div class="card h-100">
+<img src="Pulau-Samosir.jpg"
+class="card-img-top">
+<div class="card-body">
+<span class="badge bg-success">
+Budaya
+</span>
+<h4 class="mt-3">
+Pulau Samosir
+</h4>
+<p>
+Pulau yang berada di tengah Danau Toba
+dengan budaya Batak yang masih terjaga.
+</p>
+</div>
+</div>
+</div>
+
+<div class="col-lg-4">
+<div class="card h-100">
+<img src="Sipiso-piso.jpg"
+class="card-img-top">
+<div class="card-body">
+<span class="badge bg-warning text-dark">
+Alam
+</span>
+<h4 class="mt-3">
+Sipiso-piso
+</h4>
+<p>
+Air terjun setinggi sekitar 120 meter
+dengan panorama yang sangat indah.
+</p>
+</div>
+</div>
+</div>
+
+<div class="col-lg-4">
+<div class="card h-100">
+<img src="Bukit-Holbung.jpg"
+class="card-img-top">
+<div class="card-body">
+<span class="badge bg-warning text-dark">
+Alam
+</span>
+<h4 class="mt-3">
+Bukit Holbung
+</h4>
+<p>
+Bukit hijau dengan panorama Danau Toba yang menjadi favorit wisatawan.
+</p>
+</div>
+</div>
+</div>
+
+<div class="col-lg-4">
+<div class="card h-100">
+<img src="Berastagi.jpg"
+class="card-img-top">
+<div class="card-body">
+<span class="badge bg-warning text-dark">
+Alam
+</span>
+<h4 class="mt-3">
+Berastagi
+</h4>
+<p>
+Kota wisata pegunungan dengan udara yang sejuk dan pasar buah terkenal.
+</p>
+</div>
+</div>
+</div>
+
+<div class="col-lg-4">
+<div class="card h-100">
+<img src="Istana-Maimun.jpg"
+class="card-img-top">
+<div class="card-body">
+<span class="badge bg-success">
+Budaya
+</span>
+<h4 class="mt-3">
+Istana Maimun
+</h4>
+<p>
+Ikon Kota Medan yang menjadi peninggalan Kesultanan Deli.
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+
+
+<!-- DETAIL DESTINASI -->
+
+<section id="detail">
+
+<div class="container">
+
+<h2 class="section-title text-center">
+Detail Destinasi
+</h2>
+
+<div class="accordion" id="accordionWisata">
+<div class="accordion-item">
+<h2 class="accordion-header">
+<button
+class="accordion-button"
+type="button"
+data-bs-toggle="collapse"
+data-bs-target="#item1">
+Danau Toba
+</button>
+</h2>
+<div id="item1"
+class="accordion-collapse collapse show"
+data-bs-parent="#accordionWisata">
+<div class="accordion-body">
+Danau Toba adalah danau vulkanik terbesar di dunia yang terletak di Provinsi Sumatra Utara, Indonesia. 
+Terbentuk dari letusan supervolkano sekitar 74.000 tahun lalu, 
+danau megah ini memiliki luas sekitar 1.145 km² dan kedalaman mencapai 450 meter. 
+Di tengahnya terdapat Pulau Samosir yang menjadi pusat budaya Suku Batak.
+</div>
+</div>
+</div>
+
+<div class="accordion-item">
+<h2 class="accordion-header">
+<button
+class="accordion-button collapsed"
+type="button"
+data-bs-toggle="collapse"
+data-bs-target="#item2">
+Pulau Samosir
+</button>
+</h2>
+<div id="item2"
+class="accordion-collapse collapse"
+data-bs-parent="#accordionWisata">
+<div class="accordion-body">
+Pulau Samosir, pulau vulkanik megah di tengah Danau Toba, 
+Sumatra Utara. Terkenal sebagai "pulau di dalam pulau", 
+daratan seluas ≈ 630 km² ini merupakan pusat budaya Batak Toba yang menyuguhkan 
+pemandangan menakjubkan dan desa tradisional yang kaya sejarah.
+</div>
+</div>
+</div>
+
+<div class="accordion-item">
+<h2 class="accordion-header">
+<button
+class="accordion-button collapsed"
+type="button"
+data-bs-toggle="collapse"
+data-bs-target="#item3">
+Air Terjun Sipiso-piso
+</button>
+</h2>
+<div id="item3"
+class="accordion-collapse collapse"
+data-bs-parent="#accordionWisata">
+<div class="accordion-body">
+Air Terjun Sipiso-piso adalah salah satu air terjun tertinggi di Indonesia dengan ketinggian mencapai 120 meter, 
+yang terletak di Desa Tongging, Kecamatan Merek, Kabupaten Karo, Sumatra Utara. 
+Nama "Sipiso-piso" berasal dari bahasa Batak yang berarti pisau, 
+merujuk pada bentuk alirannya yang mengucur lurus, tajam, dan deras layaknya bilah pisau.
+</div>
+</div>
+</div>
+
+<div class="accordion-item">
+<h2 class="accordion-header">
+<button
+class="accordion-button collapsed"
+type="button"
+data-bs-toggle="collapse"
+data-bs-target="#item4">
+Bukit Holbung
+</button>
+</h2>
+<div id="item4"
+class="accordion-collapse collapse"
+data-bs-parent="#accordionWisata">
+<div class="accordion-body">
+Bukit Holbung adalah destinasi wisata alam di Desa Dolok Raja, Kecamatan Harian, Kabupaten Samosir, Sumatera Utara. 
+Terkenal sebagai "Bukit Teletubbies", bukit dengan elevasi 411 meter ini menawarkan panorama 360 derajat Danau Toba dan 
+perbukitan bergelombang. 
+Pengunjung dapat mendaki selama 10-15 menit untuk menikmati keindahan alam.
+</div>
+</div>
+</div>
+
+
+<div class="accordion-item">
+<h2 class="accordion-header">
+<button
+class="accordion-button collapsed"
+type="button"
+data-bs-toggle="collapse"
+data-bs-target="#item5">
+Berastagi
+</button>
+</h2>
+<div id="item5"
+class="accordion-collapse collapse"
+data-bs-parent="#accordionWisata">
+<div class="accordion-body">
+Berastagi adalah kota dataran tinggi menawan di Kabupaten Karo, Sumatra Utara, 
+yang berjarak sekitar 66 km dari Medan. Berada di ketinggian 1.300 mdpl, 
+kota ini populer karena udaranya yang sejuk, 
+pemandangan Gunung Sibayak dan Sinabung, serta pasar buahnya yang ramai.
+</div>
+</div>
+</div>
+
+<div class="accordion-item">
+<h2 class="accordion-header">
+<button
+class="accordion-button collapsed"
+type="button"
+data-bs-toggle="collapse"
+data-bs-target="#item6">
+Istana Maimun
+</button>
+</h2>
+<div id="item6"
+class="accordion-collapse collapse"
+data-bs-parent="#accordionWisata">
+<div class="accordion-body">
+Istana Maimun adalah ikon budaya sekaligus peninggalan bersejarah Kesultanan Deli di Medan, 
+Sumatera Utara. Dibangun pada 1888 dan diresmikan tahun 1891, 
+istana ini dibuka untuk wisata setiap hari dengan harga tiket mulai Rp 10.000 hingga Rp 15.000, 
+serta menyediakan penyewaan baju adat Melayu untuk pengunjung.
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+
+
+<!-- PAKET -->
+
+<section id="paket">
+
+<div class="container">
+
+<h2 class="section-title text-center">
+Paket Wisata
+</h2>
+
+<div class="row g-4">
+<div class="col-lg-4">
+<div class="card text-center h-100">
+<div class="card-header bg-danger">
+Silver
+</div>
+<div class="card-body">
+<h2 class="text-danger">
+Rp850.000
+</h2>
+<ul class="list-group list-group-flush my-4">
+<li class="list-group-item bg-dark text-white">2 Hari 1 Malam</li>
+<li class="list-group-item bg-dark text-white">Hotel</li>
+<li class="list-group-item bg-dark text-white">Transportasi</li>
+<li class="list-group-item bg-dark text-white">Sarapan</li>
+</ul>
+<a href="#pesan"
+class="btn btn-crimson w-100">
+Pilih Paket
+</a>
+</div>
+</div>
+</div>
+
+<div class="col-lg-4">
+<div class="card text-center h-100 border border-danger">
+<div class="card-header bg-danger">
+Gold
+</div>
+<div class="card-body">
+<span class="badge bg-warning text-dark">
+Terpopuler
+</span>
+<h2 class="text-danger mt-3">
+Rp1.750.000
+</h2>
+<ul class="list-group list-group-flush my-4">
+<li class="list-group-item bg-dark text-white">3 Hari 2 Malam</li>
+<li class="list-group-item bg-dark text-white">Hotel ★★★★</li>
+<li class="list-group-item bg-dark text-white">Makan 3x</li>
+<li class="list-group-item bg-dark text-white">Transportasi</li>
+<li class="list-group-item bg-dark text-white">Tour Guide</li>
+</ul>
+<a href="#pesan"
+class="btn btn-crimson w-100">
+Pilih Paket
+</a>
+</div>
+</div>
+</div>
+
+<div class="col-lg-4">
+<div class="card text-center h-100">
+<div class="card-header bg-danger">
+Platinum
+</div>
+<div class="card-body">
+<h2 class="text-danger">
+Rp2.750.000
+</h2>
+<ul class="list-group list-group-flush my-4">
+<li class="list-group-item bg-dark text-white">4 Hari 3 Malam</li>
+<li class="list-group-item bg-dark text-white">Hotel ★★★★★</li>
+<li class="list-group-item bg-dark text-white">All Meal</li>
+<li class="list-group-item bg-dark text-white">Private Tour</li>
+<li class="list-group-item bg-dark text-white">Souvenir</li>
+</ul>
+<a href="#pesan"
+class="btn btn-crimson w-100">
+Pilih Paket
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</section>
+
+
+
+<!-- GALERI -->
+
+<section id="galeri">
+
+<div class="container">
+
+<h2 class="section-title text-center">
+Galeri Wisata
+</h2>
+
+<div class="row g-4">
+<div id="carouselPPKPT" class="carousel slide" data-bs-ride="carousel">
+<div class="carousel-inner rounded">
+<div class="carousel-item active">
+    <img src="Danau-Toba2.jpg"
+    class="d-block w-100 rounded"
+    style="height:650px; object-fit:cover;">
+</div>
+<div class="carousel-item">
+    <img src="Pulau-Samosir2.jpg"
+    class="d-block w-100 rounded"
+    style="height:650px; object-fit:cover;">
+</div>
+<div class="carousel-item">
+    <img src="Sipiso-Piso2.jpg"
+    class="d-block w-100 rounded"
+    style="height:650px; object-fit:cover;">
+</div>
+<div class="carousel-item">
+    <img src="Bukit-Holbung2.jpg"
+    class="d-block w-100 rounded"
+    style="height:650px; object-fit:cover;">
+</div>
+<div class="carousel-item">
+    <img src="Berastagi2.jpg"
+    class="d-block w-100 rounded"
+    style="height:650px; object-fit:cover;">
+</div>
+<div class="carousel-item active">
+    <img src="Istana-Maimun2.jpg"
+    class="d-block w-100 rounded"
+    style="height:650px; object-fit:cover;">
+</div>
+</div>
+
+<button class="carousel-control-prev"
+type="button"
+data-bs-target="#carouselPPKPT"
+data-bs-slide="prev">
+<span class="carousel-control-prev-icon"></span>
+</button>
+
+<button class="carousel-control-next"
+type="button"
+data-bs-target="#carouselPPKPT"
+data-bs-slide="next">
+<span class="carousel-control-next-icon"></span>
+</button>
+</div>
+</div>
+</div>
+
+</section>
+
+
+
+<!-- TESTIMONI -->
+
+<section id="testimoni">
+
+<div class="container">
+
+<h2 class="section-title text-center">
+Testimoni Pengunjung
+</h2>
+
+<div id="daftarTestimoni">
+<div class="testimoni-list">
+
+<img src="mbappe2.jpg">
+
+<div class="testimoni-content">
+
+<h4>
+Kylian Mbappe
+</h4>
+
+<div class="testimoni-rating">
+★★★★★
+</div>
+
+<p>
+"Pemandangan alam yang sangat fantastis.
+Pelayanan tour guide juga sangat ramah."
+</p>
+
+<div class="testimoni-time">
+2 hari yang lalu
+</div>
+
+</div>
+
+</div>
+
+
+
+<div class="testimoni-list">
+
+<img src="haaland.jpg">
+
+<div class="testimoni-content">
+
+<h4>
+Erling Haaland
+</h4>
+
+<div class="testimoni-rating">
+★★★★★
+</div>
+
+<p>
+"Liburan sangat seru!
+Suatu saat aku akan kembali lagi."
+</p>
+
+<div class="testimoni-time">
+5 hari yang lalu
+</div>
+
+</div>
+
+</div>
+
+
+
+
+<div class="testimoni-list">
+
+<img src="Lamine-Yamal.jpg">
+
+<div class="testimoni-content">
+
+<h4>
+Lamine Yamal
+</h4>
+
+<div class="testimoni-rating">
+★★★★★
+</div>
+
+<p>
+"Sangat recommended untuk keluarga."
+</p>
+
+<div class="testimoni-time">
+1 minggu yang lalu
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+
+
+
+<hr class="my-5">
+
+
+<h3 class="text-center text-danger mb-4">
+
+Bagikan Pengalaman Anda
+
+</h3>
+
+
+<div class="row justify-content-center">
+
+<div class="col-lg-8">
+
+<div class="card">
+
+<div class="card-body p-4">
+
+<div class="mb-3">
+
+<label class="form-label">
+Nama Lengkap
+</label>
+
+<input
+type="text"
+id="namaPengunjung"
+class="form-control"
+placeholder="Masukkan nama Anda">
+
+</div>
+
+
+
+<div class="mb-3">
+
+<label class="form-label">
+
+Rating
+
+</label>
+
+<select
+id="ratingPengunjung"
+class="form-select">
+
+<option value="★★★★★">★★★★★ (5)</option>
+<option value="★★★★☆">★★★★☆ (4)</option>
+<option value="★★★☆☆">★★★☆☆ (3)</option>
+<option value="★★☆☆☆">★★☆☆☆ (2)</option>
+<option value="★☆☆☆☆">★☆☆☆☆ (1)</option>
+
+</select>
+
+</div>
+
+
+
+<div class="mb-4">
+
+<label class="form-label">
+
+Komentar
+
+</label>
+
+<textarea
+id="komentarPengunjung"
+class="form-control"
+rows="5"
+placeholder="Bagikan pengalaman liburan Anda..."></textarea>
+
+</div>
+
+
+
+<div class="d-grid">
+
+<button
+id="btnTestimoni"
+type="button"
+class="btn btn-crimson btn-lg"
+onclick="tambahTestimoni()">
+
+<i class="bi bi-send-fill"></i>
+
+Kirim Testimoni
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<h3 class="text-center text-danger mt-5 mb-4">
+
+Testimoni Terbaru
+
+</h3>
+
+
+<div
+class="row g-4"
+id="testimoniBaru">
+
+</div>
+
+</div>
+
+</section>
+
+<!-- FORM -->
+
+<section id="pesan">
+<div class="container">
+<h2 class="section-title text-center">
+Pesan Paket Wisata
+</h2>
+<div class="row justify-content-center">
+<div class="col-lg-8">
+<div class="card">
+<div class="card-body p-4">
+<form>
+<div class="form-floating mb-3">
+<input
+
+type="text"
+class="form-control"
+id="nama"
+placeholder="Nama">
+<label for="nama" style="color :grey">
+Nama Lengkap
+</label>
+</div>
+<div class="form-floating mb-3">
+
+<input
+type="email"
+class="form-control"
+id="email"
+placeholder="Email">
+<label for="email" style="color :grey">
+Email
+</label>
+</div>
+<div class="form-floating mb-3">
+
+<select
+class="form-select"
+id="paket">
+<option>Silver</option>
+<option>Gold</option>
+<option>Platinum</option>
+</select>
+<label for="paket">
+Pilih Paket
+</label>
+</div>
+<div class="form-floating mb-3">
+<textarea
+class="form-control"
+placeholder="Pesan"
+style="height:120px">
+</textarea>
+<label>
+Catatan
+</label>
+</div>
+
+<div class="form-check mb-3">
+
+<input
+class="form-check-input"
+type="checkbox"
+id="setuju">
+
+<label
+class="form-check-label"
+for="setuju">
+Saya menyetujui syarat dan ketentuan.
+</label>
+
+</div>
+
+<div
+id="peringatanCheckbox"
+class="alert alert-danger d-none">
+
+<i class="bi bi-exclamation-triangle-fill me-2"></i>
+
+Anda harus menyetujui syarat dan ketentuan terlebih dahulu sebelum melakukan pemesanan.
+
+</div>
+
+<button
+type="button"
+class="btn btn-crimson btn-lg w-100"
+onclick="cekPemesanan()">
+
+Kirim Pemesanan
+
+</button>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+
+
+<!-- SPINNER -->
+
+<div class="container text-center mb-5">
+<div class="spinner-border text-danger"></div>
+<p class="mt-3">
+Sedang Memuat informasi...
+</p>
+</div>
+
+
+
+<!-- TOAST -->
+
+<div
+class="position-fixed bottom-0 end-0 p-3">
+<div
+id="promoToast"
+class="toast">
+<div class="toast-header">
+<strong class="me-auto">
+Promo
+</strong>
+
+<button
+class="btn-close"
+data-bs-dismiss="toast">
+</button>
+</div>
+
+<div class="toast-body text-dark">
+🎉 Selamat!
+Anda mendapatkan voucher diskon 25%.
+</div>
+</div>
+</div>
+
+
+
+<!-- MODAL -->
+
+<div
+class="modal fade"
+id="modalPesan">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<h5 style="color:#121212">
+Pemesanan Berhasil
+</h5>
+
+<button
+class="btn-close btn-close-white"
+data-bs-dismiss="modal">
+</button>
+</div>
+
+<div class="modal-body" style="color:#121212">
+Terima kasih telah melakukan pemesanan.
+Admin kami akan segera menghubungi Anda.
+</div>
+<div class="modal-footer">
+<button
+class="btn btn-crimson"
+data-bs-dismiss="modal">
+
+Tutup
+</button>
+</div>
+</div>
+</div>
+</div>
+
+
+
+<!-- FOOTER -->
+
+<footer class="pt-5 pb-4">
+<div class="container">
+<div class="row">
+<div class="col-lg-4">
+<h3 class="text-danger">    
+Tentang Kami
+</h3><br>
+<p>
+Satria Travel merupakan website yang menyediakan informasi mengenai
+berbagai destinasi wisata alam di Sumatera Utara. 
+</p>
+</div>
+<div class="col-lg-4">
+
+<center><h5 class="text-danger">
+Menu
+</h5><br>
+<ul class="list-unstyled"> 
+<li><a href="#beranda" class="text-white text-decoration-none">Beranda</a></li><br>
+<li><a href="#destinasi" class="text-white text-decoration-none">Destinasi</a></li><br>
+<li><a href="#paket" class="text-white text-decoration-none">Paket</a></li><br>
+<li><a href="#galeri" class="text-white text-decoration-none">Galeri</a></li><br>
+</ul></center>
+</div>
+
+<div class="col-lg-4">
+<center><h5 class="text-danger">
+Hubungi Kami
+</h5><br>
+<p>
+<i class="bi bi-geo-alt-fill"></i>
+Medan, Sumatera Utara
+</p>
+<p>
+<i class="bi bi-envelope-fill"></i>
+info@Satriatravel.com
+</p>
+<p>
+<i class="bi bi-telephone-fill"></i>
+0812-3456-7890
+</p>
+
+<div class="fs-4">
+<i class="bi bi-facebook me-2"></i>
+<i class="bi bi-instagram me-2"></i>
+<i class="bi bi-youtube me-2"></i>
+<i class="bi bi-twitter-x"></i>
+</div>
+</div>
+</div></center>
+
+
+<hr>
+<p class="text-center mb-0">
+© 2026. Satria Travel
+</p>
+</div>
+</footer>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+
+window.addEventListener("scroll",function(){
+const navbar=document.querySelector(".navbar");
+navbar.classList.toggle("scrolled",window.scrollY>50);
+});
+
+
+const toastElement=document.getElementById("promoToast");
+const toast=new bootstrap.Toast(toastElement,{
+delay:4000
+});
+toast.show();
+
+
+const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+
+const tooltipList = [...tooltipTriggerList].map(
+tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl)
+);
+
+
+const cards=document.querySelectorAll(".card");
+const observer=new IntersectionObserver(entries=>{
+entries.forEach(entry=>{
+if(entry.isIntersecting){
+entry.target.style.opacity="1";
+entry.target.style.transform="translateY(0)";
+}
+});
+});
+
+
+cards.forEach(card=>{
+card.style.opacity="0";
+card.style.transform="translateY(40px)";
+card.style.transition=".7s";
+observer.observe(card);
+});
+
+
+function cekPemesanan(){
+const checkbox=document.getElementById("setuju");
+const alertBox=document.getElementById("peringatanCheckbox");
+if(!checkbox.checked){
+alertBox.classList.remove("d-none");
+alertBox.scrollIntoView({
+behavior:"smooth",
+block:"center"
+});
+return;
+}
+alertBox.classList.add("d-none");
+const modal=new bootstrap.Modal(
+document.getElementById("modalPesan")
+);
+modal.show();
+}
+
+/* Hilangkan alert saat checkbox dicentang */
+document.getElementById("setuju").addEventListener(
+"change",
+function(){
+const alertBox=document.getElementById("peringatanCheckbox");
+if(this.checked){
+alertBox.classList.add("d-none");
+}
+}
+);
+
+
+function tambahTestimoni(){
+
+const nama=document.getElementById("namaPengunjung").value.trim();
+const rating=document.getElementById("ratingPengunjung").value;
+const komentar=document.getElementById("komentarPengunjung").value.trim();
+const tombol=document.getElementById("btnTestimoni");
+
+if(nama===""){
+alert("Silakan masukkan nama Anda.");
+return;
+}
+
+if(komentar===""){
+alert("Silakan tuliskan komentar Anda.");
+return;
+}
+
+tombol.disabled=true;
+tombol.innerHTML='<span class="spinner-border spinner-border-sm me-2"></span>Mengirim...';
+
+
+setTimeout(function(){
+
+const daftar=document.getElementById("testimoniBaru");
+
+const col=document.createElement("div");
+
+col.className="testimoni-list";
+
+col.innerHTML=`
+
+<img src="https://ui-avatars.com/api/?name=${encodeURIComponent(nama)}&background=dc143c&color=ffffff&size=256">
+
+
+<div class="testimoni-content">
+
+<h4>
+${nama}
+</h4>
+
+
+<div class="testimoni-rating">
+
+${rating}
+
+</div>
+
+
+<p>
+
+"${komentar}"
+
+</p>
+
+
+<div class="testimoni-time">
+
+Baru saja
+
+</div>
+
+
+</div>
+
+`;
+
+daftar.prepend(col);
+
+document.getElementById("namaPengunjung").value="";
+document.getElementById("ratingPengunjung").selectedIndex=0;
+document.getElementById("komentarPengunjung").value="";
+
+const toastHTML=`
+
+<div class="toast align-items-center text-bg-success border-0"
+
+role="alert">
+
+<div class="d-flex">
+
+<div class="toast-body">
+
+✅ Terima kasih!
+
+Testimoni Anda berhasil dikirim.
+
+</div>
+
+<button
+
+type="button"
+
+class="btn-close btn-close-white me-2 m-auto"
+
+data-bs-dismiss="toast">
+
+</button>
+
+</div>
+
+</div>
+
+`;
+
+const toastContainer=document.createElement("div");
+
+toastContainer.className="position-fixed top-0 end-0 p-3";
+toastContainer.style.zIndex="9999";
+
+toastContainer.innerHTML=toastHTML;
+
+document.body.appendChild(toastContainer);
+
+const toast=new bootstrap.Toast(
+
+toastContainer.querySelector(".toast"),
+
+{
+
+delay:3000
+
+}
+
+);
+
+toast.show();
+
+toastContainer.querySelector(".toast").addEventListener(
+
+"hidden.bs.toast",
+
+function(){
+
+toastContainer.remove();
+}
+);
+
+tombol.disabled=false;
+
+tombol.innerHTML='\
+<i class="bi bi-send-fill"></i> Kirim Testimoni';
+},1200);
+}
+
+
+const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]');
+
+const popoverList = [...popoverTriggerList].map(
+popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl)
+);
+
+</script>
+
+</body>
+
+</html>
